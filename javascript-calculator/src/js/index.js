@@ -53,6 +53,37 @@ class Calculator {
     this.$.total.innerText = this.state.string.zero;
   }
 
+  addFirstNumToStorage({ target }) {
+    const sheet = {
+      numOne: this.state.zero,
+      numTwo: this.state.zero,
+      operator: '',
+    };
+
+    target = target.innerText;
+
+    if (
+      target === this.state.operations.multiplication ||
+      target === this.state.operations.division ||
+      target === this.state.operations.subtraction ||
+      target === this.state.operations.addition
+    ) {
+      sheet.numOne = this.$.total.innerText;
+      sheet.operator = target;
+      this.initDisplay();
+    }
+
+    localStorage.array = JSON.stringify(sheet);
+  }
+
+  addSecondNumToStorage() {
+    const sheet = JSON.parse(localStorage.getItem(this.state.storage));
+
+    sheet.numTwo = this.$.total.innerText;
+
+    localStorage.setItem(this.state.storage, JSON.stringify(sheet));
+  }
+
   bindEventListeners() {
     this.$.digits.addEventListener('click', this.onClickDigitBtn.bind(this));
     this.$.modifiers.addEventListener('click', this.initDisplay.bind(this));
