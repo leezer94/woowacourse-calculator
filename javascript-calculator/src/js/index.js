@@ -84,6 +84,22 @@ class Calculator {
     localStorage.setItem(this.state.storage, JSON.stringify(sheet));
   }
 
+  calculate() {
+    this.addSecondNumToStorage();
+
+    const sheet = JSON.parse(localStorage.getItem(this.state.storage));
+    const { numOne, numTwo, operator } = sheet;
+
+    if (operator === this.state.operations.addition)
+      this.$.total.innerText = Math.floor(Number(numOne) + Number(numTwo));
+    if (operator === this.state.operations.subtraction)
+      this.$.total.innerText = Math.floor(Number(numOne) - Number(numTwo));
+    if (operator === this.state.operations.multiplication)
+      this.$.total.innerText = Math.floor(Number(numOne) * Number(numTwo));
+    if (operator === this.state.operations.division)
+      this.$.total.innerText = Math.floor(Number(numOne) / Number(numTwo));
+  }
+
   bindEventListeners() {
     this.$.digits.addEventListener('click', this.onClickDigitBtn.bind(this));
     this.$.modifiers.addEventListener('click', this.initDisplay.bind(this));
