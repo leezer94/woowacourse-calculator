@@ -42,7 +42,7 @@
 <p align="middle">
 <img width="300" src="src/images/test-result.png">
 <br>
-<a href="http://127.0.0.1:5500/">데모 링크</a>
+<a href="http://127.0.0.1:5500/" target="_blank">데모 링크</a>
 </p>
 
 <br/>
