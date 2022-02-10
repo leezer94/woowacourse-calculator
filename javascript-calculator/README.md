@@ -35,6 +35,12 @@
 
 **기능 요구사항에 제시된 7개의 항목에 대해 테스트 케이스를 만든다.**
 
+## 🎯 테스트 실행 결과
+
+<p align="middle">
+  <img width="300" src="src/images/test-result.png">
+</p>
+
 <br/>
 
 ## 📄 참고 사항
