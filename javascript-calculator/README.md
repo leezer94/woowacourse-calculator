@@ -35,10 +35,14 @@
 
 **기능 요구사항에 제시된 7개의 항목에 대해 테스트 케이스를 만든다.**
 
+<br>
+
 ## 🎯 테스트 실행 결과
 
 <p align="middle">
-  <img width="300" src="src/images/test-result.png">
+<img width="300" src="src/images/test-result.png">
+<br>
+<a href="http://127.0.0.1:5500/">데모 링크</a>
 </p>
 
 <br/>
@@ -51,6 +55,7 @@
 
 ## 👏 Contributing
 
+<br>
 만약 미션 수행 중에 개선사항이 보인다면, 언제든 자유롭게 PR을 보내주세요.
 
 <br/>
