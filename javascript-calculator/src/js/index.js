@@ -49,6 +49,10 @@ class Calculator {
     return isValid;
   }
 
+  initDisplay() {
+    this.$.total.innerText = this.state.string.zero;
+  }
+
   bindEventListeners() {
     this.$.digits.addEventListener('click', this.onClickDigitBtn.bind(this));
     this.$.modifiers.addEventListener('click', this.initDisplay.bind(this));
